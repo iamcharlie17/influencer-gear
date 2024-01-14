@@ -3,6 +3,9 @@
   margin: 0;
   font-family: poppins, sans-serif;
 }
+body {
+  max-width: 1640px;
+}
 
 /* common styles */
 
@@ -25,8 +28,6 @@
   padding: 25px 30px;
   margin: 20px 0;
 }
-
-
 
 /* header styles */
 
@@ -79,47 +80,100 @@ nav ul li a {
   line-height: 70px;
 }
 
+/* main section styles */
+main {
+  margin: 3rem 6rem;
+}
 
+/*sponsor section styles */
+.sponsor-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
 
-
-
-
+/* products section */
+.products-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 7rem;
+  justify-content: space-between;
+}
+.products-section .products {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+.products-section .products img {
+  width: 100%;
+}
+.products-section .products h2 {
+  color: #18191f;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.products-section .products .price {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.products-description {
+  color: #787885;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 143%;
+  letter-spacing: 0.252px;
+}
 
 /* responsive for small devices */
 @media screen and (max-width: 576px) {
+  main {
+    margin: 2rem 1.25rem;
+  }
   header {
     margin: 2rem 1rem;
   }
-  nav{
+  nav,
+  .products-section{
+    display: flex;
     flex-direction: column;
   }
-  nav ul{
+  nav ul {
     gap: 10px;
   }
-  .banner{
+  .banner {
     flex-direction: column-reverse;
     background-position: center top;
     text-align: center;
   }
-  .banner-title{
+  .banner-title {
     font-size: 2.5rem;
   }
-  .banner .primary-description{
+  .banner .primary-description {
     margin: 0px;
+  }
+  .sponsor-section {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 
 /* responsive for medium devices */
 @media screen and (min-width: 576px) and (max-width: 960px) {
-  nav{
+  nav {
     flex-direction: column;
   }
-  .banner{
+  .banner {
     flex-direction: column-reverse;
     background-position: center top;
     text-align: center;
   }
-  .banner .primary-description{
+  .banner .primary-description {
     margin: 20px 10px 10px 10px;
   }
 }
