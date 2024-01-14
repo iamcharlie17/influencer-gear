@@ -27,6 +27,7 @@ body {
   font-weight: 600;
   padding: 25px 30px;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 /* header styles */
@@ -100,6 +101,7 @@ main {
   gap: 30px;
   margin-top: 7rem;
   justify-content: space-between;
+  position: relative;
 }
 .products-section .products {
   border-radius: 10px;
@@ -129,6 +131,44 @@ main {
   line-height: 143%;
   letter-spacing: 0.252px;
 }
+.see-more-btn {
+  color: rgba(224, 44, 109, 0.87);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  float: left;
+}
+.see-more a{
+  text-decoration: none;
+}
+
+
+/* feature section styles */
+.feature-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7rem 0;
+  gap: 100px;
+  margin: 5rem -2rem;
+}
+.feature-title{
+  color: #0A0826;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.feature-description{
+  color:  #6C6C6C;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 20px 60px 20px 0;
+}
+.join-now-btn{
+  border-radius: 0px;
+}
+
+
+
 
 /* responsive for small devices */
 @media screen and (max-width: 576px) {
@@ -139,7 +179,8 @@ main {
     margin: 2rem 1rem;
   }
   nav,
-  .products-section{
+  .products-section,
+  .feature-section {
     display: flex;
     flex-direction: column;
   }
@@ -161,6 +202,12 @@ main {
     flex-wrap: wrap;
     gap: 20px;
   }
+  .feature-section{
+    text-align: center;
+  }
+  .feature-description{
+    margin: 1rem;
+  }
 }
 
 /* responsive for medium devices */
@@ -176,4 +223,11 @@ main {
   .banner .primary-description {
     margin: 20px 10px 10px 10px;
   }
+  .feature-section{
+    gap: 30px;
+  }
+  .feature-section .feature-description{
+    margin:0;
+  }
+  
 }
